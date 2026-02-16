@@ -1,5 +1,5 @@
 import "../index.css";
-import profilBild from "../assets/Anneke.png";
+import profilBild from "../assets/ProfessionalAnneke.png";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 
