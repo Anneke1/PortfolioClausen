@@ -704,3 +704,32 @@ body {
     gap: 10px;
   }
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    padding: 1.5rem 3rem; /* Etwas mehr Luft zu den Seiten */
+  }
+
+  .navbar-links {
+    gap: 4rem; /* Mehr Whitespace zwischen den Kategorien */
+  }
+}
+
+@media (max-width: 968px) {
+  /* Verhindert, dass das Bild/der Kopf hinter der Nav verschwindet */
+  .hero-container {
+    flex-direction: column-reverse;
+    margin-top: 70px; /* HIER: Platz für die fixierte Navbar schaffen */
+  }
+
+  .hero-image-side {
+    height: 400px; /* Etwas höher, damit das Gesicht gut sichtbar ist */
+    width: 100%;
+  }
+
+  .hero-full-img {
+    object-position: top; /* Sorgt dafür, dass der Fokus auf dem Kopf liegt */
+    border-left: none;
+    border-bottom: 8px solid #d8a7b1;
+  }
+}
