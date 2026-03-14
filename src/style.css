@@ -733,3 +733,129 @@ body {
     border-bottom: 8px solid #d8a7b1;
   }
 }
+
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Drückt Titel nach links, Nav nach rechts */
+    padding: 1.5rem 4rem;
+  }
+
+  .navbar-links {
+    gap: 1.5rem; /* Weniger Platz zwischen den Punkten, damit links mehr Whitespace entsteht */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .hero-container {
+    flex-direction: column-reverse; /* Bild oben lassen, wie auf Handy */
+  }
+
+  .hero-image-side {
+    height: 60vh; /* Erhöht die Sichtbarkeit deines Körpers */
+    min-height: 500px;
+  }
+
+  .hero-full-img {
+    object-position: center 20%; /* Justiert das Bild, damit Kopf & Oberkörper drauf sind */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Education Karten genau so breit wie Experience */
+  .education-section .projects-grid {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 30px;
+  }
+
+  .education-section .project-card-new {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Featured Projects Whitespace Ausgleich */
+  .projects-section {
+    padding: 60px 1.5rem; /* Gleicher Abstand links und rechts */
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .project-card-new {
+    width: 100%; /* Verhindert, dass Karten schmaler sind als der Rest */
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  /* ... Deine Navbar-Einstellungen (Titel links, Punkte rechts) ... */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+  }
+
+  .navbar-links {
+    gap: 1.5rem;
+  }
+
+  /* --- NEUE BILD-LOGIK FÜR IPAD LANDSCAPE --- */
+
+  .hero-image-side {
+    /* Wir nutzen Flexbox, um das Bild innerhalb seiner Seite zu zentrieren */
+    display: flex;
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: flex-start; /* Vertikale Ausrichtung am oberen Rand */
+
+    /* Wir begrenzen die Höhe des *Containers* auf ca. 2/3 der Bildschirmhöhe,
+       um den Cut zu simulieren. Die Nav (80px) ziehen wir ab. */
+    height: calc(66vh - 80px);
+    overflow: hidden; /* Alles, was drüber raussteht, wird abgeschnitten */
+
+    /* Optional: Ein kleiner Schatten für mehr Tiefe */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #f5efe0; /* Hintergrundfarbe, falls das Bild nicht alles füllt */
+  }
+
+  .hero-full-img {
+    object-fit: contain;
+
+    object-position: top center;
+
+    width: auto;
+    height: 100%;
+
+    border-left: none;
+    border-bottom: 8px solid #d8a7b1;
+
+    min-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Education Sektion: Grid entfernen und auf volle Breite setzen */
+  .education-section .projects-grid {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .education-section .project-card-new {
+    width: 100% !important;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .education-section {
+    padding: 60px 1.5rem;
+  }
+}
