@@ -859,3 +859,64 @@ body {
     padding: 60px 1.5rem;
   }
 }
+
+/* --- IPAD LANDSCAPE (Waagerecht) --- */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  /* Navbar: Titel links, Punkte rechts mit viel Whitespace */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+  }
+
+  .navbar-links {
+    gap: 1.5rem; /* Punkte enger zusammen */
+  }
+
+  /* Bild wieder wie im Original-Layout (Rechts daneben) */
+  .hero-container {
+    flex-direction: row; /* Zurück zum Standard-Layout */
+    height: 80vh;
+  }
+
+  .hero-image-side {
+    flex: 1;
+    height: auto;
+  }
+
+  .hero-full-img {
+    object-fit: cover;
+    object-position: center 15%; /* Verhindert, dass oben zu viel weggeschnitten wird */
+    border-left: 10px solid #d8a7b1;
+    border-bottom: none;
+  }
+}
+
+/* --- MOBILE & ALLGEMEINE HANDY FIXES --- */
+@media (max-width: 768px) {
+  /* Education Karten volle Breite */
+  .education-section .projects-grid {
+    display: block; /* Hebt das Grid komplett auf */
+    width: 100%;
+  }
+
+  .education-section .project-card-new {
+    width: 100%;
+    margin-bottom: 30px; /* Abstand zwischen den Karten */
+    display: block;
+  }
+
+  /* Sicherstellen, dass das Padding der Sektionen einheitlich ist */
+  .about-section,
+  .experience-section,
+  .education-section,
+  .projects-section,
+  .contact-section {
+    padding: 60px 1.5rem !important;
+  }
+
+  /* Hero Bild auf Handy: Kopf positionieren */
+  .hero-full-img {
+    object-position: center 10%; /* Kopf etwas tiefer schieben, weg von der Nav */
+  }
+}
