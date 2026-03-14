@@ -920,3 +920,18 @@ body {
     object-position: center 10%; /* Kopf etwas tiefer schieben, weg von der Nav */
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-container {
+    /* Schiebt den Inhalt unter die fixierte Navbar */
+    margin-top: 85px;
+
+    /* Stellt sicher, dass das Layout bündig bleibt */
+    min-height: calc(100vh - 85px);
+    align-items: flex-start; /* Verhindert, dass der Text im Container zu weit hochspringt */
+  }
+
+  /* Falls der Text in der Hero-Side zu weit oben klebt */
+  .hero-text-side {
+    padding-top: 40px;
+  }
+}
