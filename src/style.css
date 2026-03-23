@@ -648,7 +648,7 @@ body {
   .navbar-links {
     position: fixed;
     top: 0;
-    right: -100%; /* Startet außerhalb des Bildschirms */
+    right: -100%;
     width: 70%;
     height: 100vh;
     background-color: #f5efe0;
@@ -660,12 +660,12 @@ body {
   }
 
   .navbar-links.active {
-    right: 0; /* Fährt rein */
+    right: 0;
   }
 
-  /* Hero Section Fix */
   .hero-container {
-    flex-direction: column-reverse; /* Bild oben, Text unten auf Handy */
+    flex-direction: column-reverse;
+    margin-top: 100px;
   }
 
   .hero-text-side {
@@ -686,7 +686,6 @@ body {
     width: 100%;
   }
 
-  /* Grid & Padding Fixes */
   .about-section,
   .experience-section,
   .projects-section,
@@ -695,7 +694,7 @@ body {
   }
 
   .contact-container {
-    grid-template-columns: 1fr; /* Stapelt Kontaktinfo und Formular */
+    grid-template-columns: 1fr;
     gap: 40px;
   }
 
@@ -707,60 +706,27 @@ body {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .navbar {
-    padding: 1.5rem 3rem; /* Etwas mehr Luft zu den Seiten */
+    padding: 1.5rem 3rem;
   }
 
   .navbar-links {
-    gap: 4rem; /* Mehr Whitespace zwischen den Kategorien */
+    gap: 4rem;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
   .navbar {
     display: flex;
-    justify-content: space-between; /* Drückt Titel nach links, Nav nach rechts */
+    justify-content: space-between;
     padding: 1.5rem 4rem;
   }
 
   .navbar-links {
-    gap: 1.5rem; /* Weniger Platz zwischen den Punkten, damit links mehr Whitespace entsteht */
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  /* Education Karten genau so breit wie Experience */
-  .education-section .projects-grid {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    gap: 30px;
-  }
-
-  .education-section .project-card-new {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  /* Featured Projects Whitespace Ausgleich */
-  .projects-section {
-    padding: 60px 1.5rem; /* Gleicher Abstand links und rechts */
-  }
-
-  .projects-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .project-card-new {
-    width: 100%; /* Verhindert, dass Karten schmaler sind als der Rest */
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Education Sektion: Grid entfernen und auf volle Breite setzen */
   .education-section .projects-grid {
     display: flex;
     flex-direction: column;
